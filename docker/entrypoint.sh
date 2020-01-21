@@ -12,7 +12,6 @@ fi
 export $(cat /bootstrap/${ENVIRON} | xargs)
 
 # Bootstrap NGINX Configuration
-# See here for source of printf logic: https://github.com/docker-library/docs/issues/496#issuecomment-287927576
 envsubst "`printf '${%s} ' $(bash -c "compgen -A variable")`" < /bootstrap/nginx.template > /etc/nginx/nginx.conf
 
 echo "Starting NGINX..."
