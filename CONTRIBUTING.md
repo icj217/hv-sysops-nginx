@@ -26,3 +26,6 @@ To build the container locally, run `make build`
 # Running
 
 To run the container locally, run `make run-dev` or `make run-prod` depending on the environment.
+
+# TODO
+* Don't use `nginx:latest` as base image. Use something more stable.
